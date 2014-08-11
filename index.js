@@ -23,6 +23,7 @@ module.exports = function (options) {
 
 		var fileOptions = objectAssign({}, options);
 		fileOptions.filename = file.relative;
+		fileOptions.moduleName = gutil.replaceExtension(file.relative, '');
 
 		if (file.sourceMap) {
 			fileOptions.sourceMaps = true;
